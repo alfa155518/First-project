@@ -1,0 +1,383 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+body {
+  font-family: "Cairo";
+  background-color: #cecaca3d;
+}
+:root {
+  --main-color: rgb(224, 40, 3);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/************ Nav Bar *****************/
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #f8f5f5;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  left: 0;
+  border-top: 3px solid var(--main-color);
+  padding: 10px;
+  /* Logo */
+  .logo {
+    img {
+      object-fit: cover;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+  }
+  /* Links */
+  .links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    li {
+      padding: 5px;
+      margin: 0 5px;
+      cursor: pointer;
+      color: #aaa;
+      font-size: 18px;
+      position: relative;
+      transition: 0.5s ease-in;
+      -webkit-transition: 0.5s ease-in;
+      -moz-transition: 0.5s ease-in;
+      -ms-transition: 0.5s ease-in;
+      -o-transition: 0.5s ease-in;
+
+      a {
+        color: #aaa;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--main-color);
+        bottom: -3px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0px;
+        height: 2px;
+        transition: 0.6s ease;
+        -webkit-transition: 0.6s ease;
+        -moz-transition: 0.6s ease;
+        -ms-transition: 0.6s ease;
+        -o-transition: 0.6s ease;
+      }
+      &:hover::before {
+        width: 60px;
+      }
+      &:hover {
+        color: var(--main-color);
+      }
+      i {
+        color: var(--main-color);
+      }
+    }
+  }
+
+  /* Actions */
+  .actions {
+    i {
+      cursor: pointer;
+      font-size: 18px;
+      padding: 2px;
+      margin: 5px;
+    }
+    .shopping {
+      color: var(--main-color);
+    }
+    .truck {
+      color: green;
+    }
+  }
+}
+
+/* ************** Search Input ************* */
+nav,
+.main .face-page {
+  .search {
+    position: relative;
+    input {
+      padding: 7px;
+      border-radius: 6px;
+      outline: none;
+      border: 2px solid #d90808fc;
+      width: 100%;
+    }
+    button {
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      color: #ffff;
+      background-color: red;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 7px;
+      border-radius: 2px;
+      line-height: 1.2;
+    }
+  }
+}
+
+/* ################## Main Section ################### */
+.main {
+  padding: 100px 0;
+}
+
+/* ********** Home Page Section ************** */
+.home-page {
+  background-image: url("../images/home-image.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #c3c3c34a;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  /* ************** Face page ************* */
+  .face-page {
+    padding: 50px;
+    margin: 20px auto;
+    text-align: center;
+    h2 {
+      font-size: 80px;
+      color: #fff;
+      font-weight: 900;
+      padding: 20px 0;
+      margin: 5px auto;
+    }
+
+    /* ************** Search Input ********** */
+    .search {
+      position: relative;
+      input {
+        padding: 13px 17px;
+        margin-bottom: 25px;
+      }
+      button {
+        right: 1px;
+        padding: 6px 14px;
+        line-height: 2.3;
+      }
+    }
+    .items {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* *************** all Items Links ************** */
+.main .home-page {
+  .items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    .item {
+      width: 235px;
+      text-align: center;
+      color: #fff;
+      background-color: rgb(224 3 3 / 66%);
+      padding: 10px 38px;
+      border-radius: 7px;
+      cursor: pointer;
+      margin: 5px 15px;
+      font-size: 21px;
+      transition: 1s;
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
+      &:hover {
+        background-color: red;
+        scale: 1.2;
+      }
+    }
+  }
+}
+
+/* ************* Services Section ************* */
+
+.services {
+  background-color: #b1ddec75;
+  padding: 20px 0;
+  margin: 52px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  .box {
+    padding: 20px;
+    margin: 10px;
+    i {
+      font-size: 35px;
+      color: var(--main-color);
+    }
+    h4 {
+      padding: 10px 0;
+      color: #795548;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    em {
+      color: #555;
+    }
+  }
+}
+
+/* ************** wrapper books ************** */
+
+.wrapper-books {
+  padding: 10px 0;
+  margin: 20px 0;
+
+  /* Every Product */
+  .products {
+    padding: 10px 0;
+    margin: 10px 0;
+    h3 {
+      display: flex;
+      align-items: center;
+      padding: 10px 5px;
+      margin: 10px 5px;
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--main-color);
+      i {
+        color: #006f39fa;
+        margin: 0 7px;
+        font-size: 17px;
+      }
+    }
+
+    /* Every Books */
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      padding: 5px;
+
+      /* every Book */
+      .book {
+        position: relative;
+        margin: 10px;
+        background-color: #fff;
+        border-radius: 6px;
+        text-align: center;
+        overflow: hidden;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        &::before {
+          content: "عرض خاص";
+          position: absolute;
+          top: -15%;
+          left: 31%;
+          background-color: var(--main-color);
+          color: #fff;
+          padding: 10px;
+          transition: 1s;
+          -webkit-transition: 1s;
+          -moz-transition: 1s;
+          -ms-transition: 1s;
+          -o-transition: 1s;
+        }
+        &:hover {
+          box-shadow: 1px 2px 7px 1px;
+        }
+        &:hover::before {
+          top: 0%;
+        }
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        .stars {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+          li {
+            color: orange;
+            margin: 5px;
+          }
+        }
+
+        /* Book Information */
+        .info {
+          padding-bottom: 30px;
+          .book-name {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: var(--main-color);
+          }
+          .author {
+            font-weight: 900;
+            font-size: 18px;
+            color: #555;
+          }
+        }
+
+        /* Price Of Book */
+        .prices {
+          padding: 4px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-around;
+          background-color: #ebebeb;
+          .new-price {
+            color: rgb(0, 107, 0);
+          }
+          .old-price {
+            color: var(--main-color);
+            text-decoration: line-through;
+          }
+          span:last-child {
+            color: rgb(0, 107, 0);
+          }
+        }
+      }
+    }
+  }
+}

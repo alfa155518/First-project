@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="books read" />
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
+    <title>متجر الكتب</title>
+    <!-- Css Fils -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="/css/sing-up.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!--################# Nav Bar ###############-->
+    <nav>
+      <a href="/index.html" class="logo"
+        ><img src="./images/logo.jpg" alt="logo"
+      /></a>
+      <div class="search">
+        <input type="text" placeholder="كتب,روايات,مقالات...." />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <ul class="links">
+        <li><i class="fa-solid fa-gift"></i> بطاقة الهدايا</li>
+        <li><a href="/business-management.html">ادارة اعمال</a></li>
+        <li>قسم الاطفال</li>
+        <li>قسم الروايات</li>
+        <li>تسجيل دخول</li>
+        <li>اشهر الكتب</li>
+      </ul>
+      <div class="actions">
+        <i class="fa-solid fa-cart-shopping shopping"></i>
+        <i class="fa-solid fa-truck-fast truck"></i>
+      </div>
+    </nav>
+
+    <!-- Form -->
+    <div class="user-form">
+      <form>
+        <label for="First Name">First Name</label>
+        <input type="text" id="firstName" placeholder="First Name" required />
+
+        <label for="Last Name">Last Name</label>
+        <input type="text" id="first" placeholder="last nae" required />
+
+        <label for="mail">Email</label>
+        <input type="email" id="mail" placeholder="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="number" id="phone" placeholder="phone number" required />
+        <a href="/index.html">Create Account</a>
+      </form>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

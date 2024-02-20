@@ -1,0 +1,39 @@
+.user-form {
+  position: relative;
+  form {
+    position: absolute;
+    width: 50%;
+    top: 184px;
+    left: 25%;
+    padding: 20px 10px;
+    background-color: #0371e6;
+    border-radius: 5px;
+    label {
+      display: block;
+      /* width: 10%; */
+      color: #fff;
+    }
+    input {
+      width: 100%;
+      padding: 7px;
+      border-radius: 5px;
+      margin: 10px 0;
+      border: none;
+      outline: none;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      padding: 6px;
+      background-color: #0052ff;
+      cursor: pointer;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      color: #fff;
+    }
+  }
+}
