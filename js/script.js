@@ -1,4 +1,67 @@
+const bars = document.querySelector(".bars");
+const linksContainer = document.querySelector("nav .links");
+const allLinks = document.querySelectorAll("nav .links li");
+
+bars.addEventListener("click", () => {
+  linksContainer.classList.toggle("active-links");
+});
+
+allLinks.forEach((li) => {
+  li.addEventListener("click", () => {
+    if (linksContainer.classList.contains("active-links")) {
+      linksContainer.classList.remove("active-links");
+    }
+  });
+});
+
+// ************* Home Page Section ***********
+// Home Page To Change image
+let homePage = document.querySelector(".main .home-page");
+
+// Imgs Path
+const arrayImg = [
+  "home-1.jpg",
+  "home-2.webp",
+  "home-3.webp",
+  "home-4.webp",
+  "home-5.webp",
+];
+
+// Every 3 Seconds img Change
+if (homePage) {
+  setInterval(() => {
+    let randomNumber = Math.floor(Math.random() * arrayImg.length);
+    homePage.style.backgroundImage =
+      `url("images/` + arrayImg[randomNumber] + `")`;
+  }, 3000);
+}
+
+// *********** Products Section *************
+
+// Images To Know Info
 let allImgs = document.querySelectorAll(".wrapper-books .books .book img");
+
+// Option Of Lazy Loading
+const Option = {
+  rootMargin: "0px 0px -200px 0px",
+};
+
+// Make Lazy Loading
+const imgObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const imgTarget = entry.target;
+      imgTarget.setAttribute("src", imgTarget.dataset.src);
+    }
+  });
+}, Option);
+
+// Target Observer On Img
+allImgs.forEach((img) => {
+  imgObserver.observe(img);
+});
+
+/*  Start Shopping Cart */
 
 // Array To Store item
 let arrayData = [1];
@@ -54,7 +117,7 @@ allImgs.forEach((img) => {
 
     // To Direct to info book page
     setTimeout(() => {
-      window.location = "/book-info.html";
+      window.location = "book-info.html";
     }, 1000);
   });
 });
@@ -69,9 +132,36 @@ function cartEle(img, name, newPrice, oldPrice, stars) {
                     <span>بعد: ${newPrice}</span>
                     <span>هتوفر: %50</span>
                   </div>
-                    <button>اضف الي عربة التسوق <i class="fa-solid fa-cart-plus"></i></button>
+                    <a href="payment-page.html"><button>
+                    اضف الي عربة التسوق <i class="fa-solid fa-cart-plus"></i>
+                  </button></a>
                     <ul>
                     ${stars}
                     </ul>
                     `;
 }
+
+/*  End Shopping Cart */
+
+// Scroll To Top
+const scrollToTop = document.querySelector(".arrow-up");
+
+// Add Or Remove Scroll To Top
+if (scrollToTop) {
+  window.addEventListener("scroll", (e) => {
+    if (window.scrollY >= 900) {
+      scrollToTop.style.display = "block";
+    } else {
+      scrollToTop.style.display = "none";
+    }
+  });
+}
+
+// Go Top
+scrollToTop?.addEventListener("click", (e) => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});

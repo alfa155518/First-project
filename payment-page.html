@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="books read" />
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
+    <title>متجر الكتب</title>
+    <!-- Css Fils -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/payment.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body dir="rtl">
+    <!--################# Nav Bar ###############-->
+    <nav>
+      <div class="bars">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+      <a href="/index.html" class="logo"
+        ><img src="./images/logo.jpg" alt="logo"
+      /></a>
+      <div class="search">
+        <input type="text" placeholder="كتب,روايات,مقالات...." />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <ul class="links">
+        <li><i class="fa-solid fa-gift"></i> بطاقة الهدايا</li>
+        <li><a href="/business-management.html">ادارة اعمال</a></li>
+        <li>قسم الاطفال</li>
+        <li>قسم الروايات</li>
+        <li><a href="/sing-up.html">تسجيل دخول</a></li>
+        <li>اشهر الكتب</li>
+      </ul>
+      <div class="actions">
+        <i class="fa-solid fa-cart-shopping shopping"></i>
+        <i class="fa-solid fa-truck-fast truck"></i>
+      </div>
+    </nav>
+
+    <!-- PayMent Section -->
+    <section class="payment">
+      <!-- Payment Card -->
+      <div class="payment-cards">
+        <h1>Payment Method</h1>
+
+        <!-- Paypal Card -->
+        <div class="card">
+          <div class="card-head">
+            <h3>Paypal</h3>
+            <img src="/images/pay.png" alt="payment-img" />
+          </div>
+          <form>
+            <label for="paypal">Paypal Email</label>
+            <input type="text" placeholder="Paypal Email" id="paypal" />
+          </form>
+        </div>
+
+        <!-- Credit Card Number -->
+        <div class="card">
+          <div class="card-head">
+            <h3>Credit card</h3>
+            <img src="/images/pay.png" alt="payment-img" />
+          </div>
+          <form>
+            <label for="card-number">Card Number</label>
+            <input
+              type="number"
+              id="card-number"
+              placeholder="0000 0000 0000 0000"
+              required />
+            <label for="Expiry Date">Expiry Date</label>
+            <input type="text" id="Expiry Date" placeholder="MM/YY" required />
+            <label for="CVC/CVV">CVC/CVV</label>
+            <input type="text" id="CVC/CVV" placeholder="CVC/CVV" required />
+          </form>
+        </div>
+      </div>
+
+      <!-- User Information and details -->
+      <form class="form-details">
+        <h1>Fill the following details for shipping.</h1>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" id="email" required />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          autocomplete=""
+          required />
+        <label for="address">Address</label>
+        <input type="text" placeholder="1234 Main St" id="address" />
+        <label for="address2">Address 2</label>
+        <input type="text" placeholder="Address 2" id="address2" />
+        <label for="city">City</label>
+        <input type="text" placeholder="City" id="city" />
+        <label for="state">State</label>
+        <input type="text" placeholder="State" id="state" />
+        <button class="btn">Proceed To Pay</button>
+      </form>
+    </section>
+
+    <!-- ########## Footer ############ -->
+    <footer>
+      <ul>
+        <h3>حمل تطبيق متجر الكتب</h3>
+        <li><img src="/images/app-store.webp" alt="app-store" /></li>
+        <li>
+          <img
+            src="/images/google-play-download.svg"
+            alt="google-play-download" />
+        </li>
+      </ul>
+      <ul>
+        <h3>روابط سريعه</h3>
+        <li>شروط وأحكام الاستخدام</li>
+        <li>سياسة الخصوصية</li>
+        <li>سياسة الإرجاع والاسترداد</li>
+        <li>تعليمات استخدام كارت الخصم</li>
+        <li>إصداراتنا على جوجل بلاي</li>
+        <li>كتبنا على أمازون</li>
+      </ul>
+      <ul>
+        <h3>روابط الدعم</h3>
+        <li>اتصل بنا</li>
+        <li>خدمة العملاء</li>
+        <li>أماكن فروعنا</li>
+        <li>انشر معنا</li>
+      </ul>
+      <ul>
+        <h3>منتجاتنا</h3>
+        <li>ادارة اعمال</li>
+        <li>اقتصاد</li>
+        <li>صحه نفسيه</li>
+        <li>علم نفس</li>
+        <li>روايات</li>
+        <li>خيال علمي</li>
+      </ul>
+      <ul>
+        <h3>اصداراتنا</h3>
+        <li>اصدارات متجر الكتب</li>
+        <li>اصدارات معرض القاهرة</li>
+        <li>عرض كوميكس</li>
+        <li>تنميه ذاتيه وعلم نفس</li>
+        <li>تربيه الاطفال والناشئين</li>
+      </ul>
+    </footer>
+  </body>
+</html>
