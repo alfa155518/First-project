@@ -20,6 +20,33 @@ a {
   text-decoration: none;
 }
 
+/* Custom Head section in all Pages */
+.head-section {
+  padding: 139px;
+  text-align: center;
+  font-size: 54px;
+  font-weight: 900;
+  color: #555;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 19%;
+    height: 2px;
+    background-color: red;
+    top: 60%;
+  }
+  @media (max-width: 492px) {
+    &::before {
+      top: 66%;
+      width: 30%;
+    }
+  }
+}
+
 /************ Nav Bar *****************/
 
 nav {
@@ -76,15 +103,14 @@ nav {
       padding: 5px;
       margin: 0 5px;
       cursor: pointer;
-      color: #aaa;
       font-size: 18px;
       position: relative;
-      transition: 0.5s ease-in;
-      -webkit-transition: 0.5s ease-in;
-      -moz-transition: 0.5s ease-in;
-      -ms-transition: 0.5s ease-in;
-      -o-transition: 0.5s ease-in;
-
+      color: #aaa;
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
       a {
         color: #aaa;
         transition: 0.5s ease-in-out;
