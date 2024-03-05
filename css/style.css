@@ -156,8 +156,21 @@ nav {
       padding: 2px;
       margin: 5px;
     }
-    .shopping {
-      color: var(--main-color);
+    a {
+      position: relative;
+      .shopping {
+        color: green;
+      }
+      span {
+        position: absolute;
+        right: 0;
+        top: -16px;
+        background-color: green;
+        color: #fff;
+        padding: 4px;
+        border-radius: 50%;
+        line-height: 0.6;
+      }
     }
     .truck {
       color: green;
@@ -409,7 +422,6 @@ nav,
         color: #006f39fa;
         margin: 0 7px;
         font-size: 17px;
-        /* margin-top: 20px; */
       }
     }
 
@@ -501,6 +513,7 @@ nav,
           }
           span:last-child {
             color: rgb(0, 107, 0);
+            cursor: pointer;
           }
         }
       }

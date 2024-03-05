@@ -1,0 +1,87 @@
+/* ******** Shopping Items ************ */
+.shopping-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  /* Responsive On All Screens */
+  @media (max-width: 492px) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  /* Every Book */
+  .cart-item {
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0px 0px 9px 1px #aaa;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    /* Book img */
+    img {
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+    /* Information single Book */
+    .info {
+      /* ********* Stars Rating ********** */
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        li {
+          color: orange;
+        }
+      }
+      h2 {
+        margin-bottom: 16px;
+        color: #555;
+      }
+    }
+    /* ******* Prices ******* */
+    .prices {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      background-color: #e2e2e2;
+      font-size: 20px;
+      .new-price {
+        color: green;
+      }
+      .old-price {
+        color: red;
+        text-decoration: line-through;
+      }
+      /* ****** Trash Icon ****** */
+      i {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* button To Re-direct to payment page */
+.btn-by {
+  text-align: center;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  color: #fff;
+  background-color: green;
+  padding: 20px;
+}
+
+/* Class To Hide Btn */
+.appear {
+  display: none;
+}
